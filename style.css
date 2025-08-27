@@ -1,7 +1,3 @@
-/* ------------------------------ */
-/*           VARIABLES            */
-/* ------------------------------ */
-
 :root {
   --bg-main: #1e1e2f;
   --bg-card: #2c2c3e;
@@ -17,9 +13,6 @@
   --shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ------------------------------ */
-/*           RESET                */
-/* ------------------------------ */
 
 * {
   margin: 0;
@@ -28,9 +21,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ------------------------------ */
-/*           BASE STYLES         */
-/* ------------------------------ */
 
 body {
   background-color: var(--bg-main);
@@ -43,9 +33,6 @@ button {
   font-family: inherit;
 }
 
-/* ------------------------------ */
-/*           LAYOUT              */
-/* ------------------------------ */
 
 .wrapper {
   width: 90%;
@@ -56,9 +43,7 @@ button {
   gap: 1.5em;
 }
 
-/* ------------------------------ */
-/*           TYPOGRAPHY          */
-/* ------------------------------ */
+
 
 .app-title {
   text-align: center;
@@ -83,9 +68,6 @@ button {
   margin-bottom: 1em;
 }
 
-/* ------------------------------ */
-/*           COMPONENTS          */
-/* ------------------------------ */
 
 .card {
   background-color: var(--bg-card);
@@ -114,7 +96,7 @@ input:focus {
   outline: 2px solid var(--highlight);
 }
 
-/* Submit Button */
+
 button.submit {
   width: 100%;
   padding: 0.7em;
@@ -135,7 +117,7 @@ button.submit:hover {
   background-color: var(--highlight-dark);
 }
 
-/* Output Container */
+
 .output-container {
   display: flex;
   justify-content: space-between;
@@ -160,7 +142,7 @@ button.submit:hover {
   color: var(--highlight);
 }
 
-/* List Section */
+
 .list-container {
   display: flex;
   flex-direction: column;
@@ -182,7 +164,7 @@ button.submit:hover {
   transform: translateY(-2px);
 }
 
-/* Item Info */
+
 .product {
   color: var(--text-main);
   font-weight: 600;
@@ -196,7 +178,7 @@ button.submit:hover {
   font-size: 0.95em;
 }
 
-/* Edit/Delete Buttons */
+
 .edit,
 .delete {
   background: transparent;
@@ -222,9 +204,7 @@ button.submit:hover {
   transform: scale(1.2);
 }
 
-/* ------------------------------ */
-/*           STATES              */
-/* ------------------------------ */
+
 
 .hide {
   display: none;
@@ -235,9 +215,7 @@ button.submit:hover {
   font-size: 0.9em;
 }
 
-/* ------------------------------ */
-/*        MEDIA QUERIES          */
-/* ------------------------------ */
+
 
 @media screen and (max-width: 500px) {
   .output-container {
@@ -257,3 +235,4 @@ button.submit:hover {
     font-size: 1em;
   }
 }
+
