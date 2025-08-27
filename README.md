@@ -15,4 +15,4 @@ A simple and responsive web app to help you manage your budget and expenses. Bui
 
 * HTML, CSS, JavaScript
 * [Font Awesome](https://fontawesome.com/)
-* [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
+* [Google Fonts](https://fonts.google.com)
