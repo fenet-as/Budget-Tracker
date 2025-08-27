@@ -1,0 +1,259 @@
+/* ------------------------------ */
+/*           VARIABLES            */
+/* ------------------------------ */
+
+:root {
+  --bg-main: #1e1e2f;
+  --bg-card: #2c2c3e;
+  --bg-input: #3c3c4f;
+  --bg-hover: #50506a;
+  --highlight: #4c9eff;
+  --highlight-dark: #388de0;
+  --text-main: #ffffff;
+  --text-light: #f0f0f0;
+  --text-muted: #ddd;
+  --text-placeholder: #b0b0b0;
+  --danger: #ff4d4d;
+  --shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------ */
+/*           RESET                */
+/* ------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ------------------------------ */
+/*           BASE STYLES         */
+/* ------------------------------ */
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+/* ------------------------------ */
+/*           LAYOUT              */
+/* ------------------------------ */
+
+.wrapper {
+  width: 90%;
+  max-width: 600px;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+/* ------------------------------ */
+/*           TYPOGRAPHY          */
+/* ------------------------------ */
+
+.app-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1em;
+}
+
+.card h3 {
+  margin-bottom: 0.8em;
+  color: #e0e0e0;
+}
+
+.card h3 i,
+.list h3 i {
+  margin-right: 0.5em;
+  color: var(--highlight);
+}
+
+.list h3 {
+  margin-bottom: 1em;
+}
+
+/* ------------------------------ */
+/*           COMPONENTS          */
+/* ------------------------------ */
+
+.card {
+  background-color: var(--bg-card);
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 0.6em 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+}
+
+input::placeholder {
+  color: var(--text-placeholder);
+  font-size: 0.95em;
+}
+
+input:focus {
+  outline: 2px solid var(--highlight);
+}
+
+/* Submit Button */
+button.submit {
+  width: 100%;
+  padding: 0.7em;
+  background-color: var(--highlight);
+  border: none;
+  color: var(--text-main);
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+button.submit:hover {
+  background-color: var(--highlight-dark);
+}
+
+/* Output Container */
+.output-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1em;
+}
+
+.output-container > div {
+  flex: 1;
+  background-color: var(--bg-input);
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.output-container p {
+  font-weight: bold;
+  color: var(--text-muted);
+}
+
+.output-container span {
+  font-size: 1.2em;
+  color: var(--highlight);
+}
+
+/* List Section */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.sublist-content {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  background-color: #44445a;
+  padding: 1em;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sublist-content:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-2px);
+}
+
+/* Item Info */
+.product {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.amount {
+  color: var(--highlight);
+  font-weight: 500;
+  text-align: right;
+  font-size: 0.95em;
+}
+
+/* Edit/Delete Buttons */
+.edit,
+.delete {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-left: 0.5em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.edit {
+  margin-right: 0.5em;
+}
+
+.edit:hover {
+  color: var(--highlight);
+  transform: scale(1.2);
+}
+
+.delete:hover {
+  color: var(--danger);
+  transform: scale(1.2);
+}
+
+/* ------------------------------ */
+/*           STATES              */
+/* ------------------------------ */
+
+.hide {
+  display: none;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.9em;
+}
+
+/* ------------------------------ */
+/*        MEDIA QUERIES          */
+/* ------------------------------ */
+
+@media screen and (max-width: 500px) {
+  .output-container {
+    flex-direction: column;
+  }
+
+  .sublist-content {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    text-align: left;
+  }
+
+  .edit,
+  .delete,
+  .product,
+  .amount {
+    font-size: 1em;
+  }
+}

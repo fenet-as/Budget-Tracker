@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget App</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="app-title"><i class="fas fa-wallet"></i> Budget Tracker</h1>
+
+    <!-- Budget Input -->
+    <div class="card">
+      <h3><i class="fas fa-coins"></i> Set Your Budget</h3>
+      <p class="hide error" id="budget-error">Please enter a valid budget amount.</p>
+      <input type="number" id="total-amount" placeholder="e.g., 5000" aria-label="Total Budget" />
+      <button class="submit" id="total-amount-button" title="Set your total budget">Set Budget</button>
+    </div>
+
+    <!-- Expense Input -->
+    <div class="card">
+      <h3><i class="fas fa-shopping-cart"></i> Add an Expense</h3>
+      <p class="hide error" id="product-title-error">Title and amount are required.</p>
+      <input type="text" class="product-title" id="product-title" placeholder="e.g., Groceries" aria-label="Expense Title" />
+      <input type="number" id="user-amount" placeholder="e.g., 250" aria-label="Expense Amount" />
+      <button class="submit" id="check-amount" title="Add this expense">Add Expense</button>
+    </div>
+
+    <!-- Summary -->
+    <div class="card output-container">
+      <div>
+        <p>Total Budget</p>
+        <span id="amount">0</span>
+      </div>
+      <div>
+        <p>Expenses</p>
+        <span id="expenditure-value">0</span>
+      </div>
+      <div>
+        <p>Balance</p>
+        <span id="balance-amount">0</span>
+      </div>
+    </div>
+
+    <!-- List -->
+    <div class="card list">
+      <h3><i class="fas fa-list"></i> Expense List</h3>
+      <div class="list-container" id="list"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="index.js"></script>
+</body>
+</html>
